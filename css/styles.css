@@ -250,6 +250,51 @@ p  { font-size: 1rem; line-height: 1.75; color: #41495b; }
 .problem-card h3 { font-size: 1.1rem; margin-bottom: 8px; }
 .problem-card p { font-size: 0.94rem; color: #5a6275; }
 
+/* ── Stat bar panel ── */
+.stat-panel {
+  margin-top: 34px;
+  background: var(--white);
+  border: 1px solid var(--gray-2);
+  border-radius: var(--radius);
+  padding: 30px 32px;
+  box-shadow: var(--shadow);
+}
+.stat-panel__head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 26px; }
+.stat-panel__head h3 { font-size: 1.12rem; }
+.stat-panel__tag {
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em;
+  color: var(--violet); background: var(--violet-light);
+  padding: 5px 13px; border-radius: 100px; white-space: nowrap;
+}
+.bar-row { margin-bottom: 20px; }
+.bar-row:last-child { margin-bottom: 0; }
+.bar-row__top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 8px; }
+.bar-row__label { font-size: 0.92rem; font-weight: 600; color: #41495b; }
+.bar-row__val { font-family: var(--display); font-size: 1.1rem; font-weight: 800; color: var(--violet); }
+.bar-row__track { height: 11px; background: var(--gray-2); border-radius: 100px; overflow: hidden; }
+.bar-row__fill { height: 100%; border-radius: 100px; background: linear-gradient(90deg, var(--violet), var(--cyan)); }
+
+/* ── Metric (stat dashboard) cards ── */
+.metric-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+@media (min-width: 560px) { .metric-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 980px) { .metric-grid { grid-template-columns: repeat(4, 1fr); } }
+.metric-card {
+  background: var(--white);
+  border: 1px solid var(--gray-2);
+  border-radius: var(--radius);
+  padding: 28px 22px;
+  text-align: center;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+.metric-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-4px); }
+.metric-card__viz { height: 124px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+.metric-card__viz svg { width: 124px; height: 124px; }
+.metric-card p { font-size: 0.9rem; color: #5a6275; line-height: 1.55; }
+.metric-note { text-align: center; font-size: 0.8rem; color: var(--gray-4); margin-top: 28px; }
+.ring-track { stroke: var(--gray-2); }
+.ring-val { stroke: var(--violet); }
+.ring-text { font-family: var(--display); font-weight: 800; fill: var(--ink); }
+
 /* ══════════════════════════════════ SERVICES ══════════════════════════════════ */
 .services-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
 @media (min-width: 600px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
