@@ -295,6 +295,28 @@ p  { font-size: 1rem; line-height: 1.75; color: #41495b; }
 }
 .process-step h3 { font-size: 1.12rem; color: var(--white); margin-bottom: 8px; }
 .process-step p { font-size: 0.9rem; color: rgba(255,255,255,.6); }
+.process-chart {
+  max-width: 840px;
+  margin: 0 auto 44px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.09);
+  border-radius: var(--radius);
+  padding: 24px 26px 18px;
+}
+.process-chart__caption {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  margin-bottom: 10px;
+}
+.process-chart__caption > span:first-child {
+  font-family: var(--display); font-size: 0.96rem; font-weight: 700; color: var(--white);
+}
+.process-chart__trend {
+  font-size: 0.78rem; font-weight: 700; letter-spacing: 0.04em;
+  color: #A9D2CC; background: rgba(127,189,189,.14);
+  border: 1px solid rgba(127,189,189,.3);
+  padding: 4px 12px; border-radius: 100px;
+}
+.process-chart svg { width: 100%; height: auto; display: block; font-family: var(--font); }
 
 /* ══════════════════════════════════ WHY / VALUES ══════════════════════════════════ */
 .values-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
